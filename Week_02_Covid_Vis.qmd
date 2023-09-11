@@ -1,7 +1,7 @@
 ---
 title: "Week 02: COVID Visualization Activity"
 date: "September, 11 2023"
-author: "**`[[`**Your Name**`]]`**"
+author: "Shen Liu"
 ---
 
 Today, we'll be working with a data set related to COVID.
@@ -21,7 +21,7 @@ Try using the different data sets and see which ones are good for making which p
 
 
 ```{r first_plot}
-ggplot(covid_data_count, aes(x = date, y = Cases)) + geom_point()
+ggplot(covid_data_orig, aes(x = Date, y = Cases_Total)) + geom_point()
 ```
 
 
