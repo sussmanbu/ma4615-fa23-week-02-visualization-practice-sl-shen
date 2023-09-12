@@ -34,8 +34,32 @@ covid_data_count |>
   filter(state == "MA") |> 
   ggplot(aes(x = date, y = Cases, color = race)) + geom_line()
 ```
+```{r}
+covid_data_count |> 
+  filter(race == "Asian") |>
+  ggplot(aes(x = Cases, y = Deaths, color = state)) + 
+  geom_point(alpha = 0.8, size = 1) +
+  geom_smooth() + 
+  scale_x_continuous(breaks = seq(0, 3500000, by = 10000)) +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1)) + 
+  labs(
+    title = "Covid Cases And Death for Asian",
+    legend = "state"
+  )
+```
 
 1. Write code for a plot and describe what you observe?
+
+   I can see the number of cases and deaths in different states, especially state CA has the most cases and deaths. In addition, it is not hard to see the relation between cases and deaths.
+   
 2. Are there any conclusions you can draw?
+
+   In all states, as Covid cases for Asian increases, deaths also increases.
+   
 3. What were you not able to do due to not having the R knowledge?
+
+   To make the figure look not so crowd and make the color legend easier to distinguish.
+   
 4. What other data would be useful to better understand this data?
+
+   The cases and deaths for other famous diseases other than Covid. Then by comparing the data, we can see how the situation and the deaths rate the Covid had. By doing so, we can understand Covid better.
